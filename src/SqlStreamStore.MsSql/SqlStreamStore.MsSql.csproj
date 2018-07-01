@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <Description>SQL Server (2012+) provider for SQL Stream Store</Description>
     <AssemblyTitle>SQL Stream Store - SQL Server (2012+) Provider</AssemblyTitle>
@@ -13,17 +12,15 @@
     <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.0</NetStandardImplicitPackageVersion>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="MsSqlScripts\*.sql"/>
+    <EmbeddedResource Include="ScriptsV2\*.sql" />
+    <EmbeddedResource Include="ScriptsV3\*.sql" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SqlStreamStore\SqlStreamStore.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.5.0" />
   </ItemGroup>
-
 </Project>
